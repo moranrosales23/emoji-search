@@ -5,7 +5,7 @@ import "./EmojiResultRow.css";
 export default class EmojiResultsRow extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
-    symbol: PropTypes.string
+    symbol: PropTypes.string,
   };
 
   render() {
@@ -15,6 +15,7 @@ export default class EmojiResultsRow extends PureComponent {
       <div
         className="component-emoji-result-row copy-to-clipboard"
         data-clipboard-text={this.props.symbol}
+        data-testid="copy"
       >
         <img alt={this.props.title} src={src} />
         <span className="title">{this.props.title}</span>
